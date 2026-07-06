@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumenty - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav><a href="index.html" class="nav-logo">Zombie Noobs</a></nav>
+
+    <header class="guide-header" style="margin-top: 80px; padding: 60px 20px; text-align: center; background: linear-gradient(to bottom, rgba(10,10,10,0.8), rgba(10,10,10,1)), url('img/Kowakujo.webp') no-repeat center center/cover; border-bottom: 2px solid var(--accent-red);">
+        <h1>Dokumenty</h1>
+        <p>Dokumenty możecie zebrać w dowolnej kolejności.</p>
+        <p>Aby zebrać wszystko, najlepiej zacząć od odblokowania Pack-a-Punch, ponieważ część przedmiotów pojawia się dopiero po tym etapie.</p>
+    </header>
+
+    <section class="guide-content">
+        <a href="mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+       
+        <!-- CZĘŚĆ 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>Dokumenty i nagrania (Lokacje Statyczne)</span></h3>
+            <p>Dokument 1 (Dachy): Po odblokowaniu Pack-a-Punch, wyjdź na dach w Shogun's Sanctum. Przed wyjściem znajdziesz szafkę ze zwojami – uderz je atakiem wręcz (Melee), by odkryć dokument.</p>
+            <p>Dokument 2 (Kuchnia): W Kitchens (Kuchnie), uderzaj w beczki obok automatu Double Tap. Jedna z nich (losowo) upuści dokument.</p>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <br>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+   <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    // Pobieramy nazwę pliku, aby klucze były unikalne dla każdej strony
+    const pageName = window.location.pathname.split('/').pop(); 
+    
+    checkboxes.forEach(cb => {
+        const uniqueId = pageName + '-' + cb.id; // Klucz typu: kowakujo-raygun.html-krok1
+        const savedState = localStorage.getItem(uniqueId);
+        
+        if (savedState === 'true') cb.checked = true;
+        
+        cb.addEventListener('change', () => {
+            localStorage.setItem(uniqueId, cb.checked);
+        });
+    });
+    </script>
+</body>
+</html>
