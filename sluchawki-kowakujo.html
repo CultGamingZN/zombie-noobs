@@ -10,7 +10,7 @@
 
     <nav><a href="index.html" class="nav-logo">Zombie Noobs</a></nav>
 
-    <header class="guide-header" style="margin-top: 80px; padding: 60px 20px; text-align: center; background: linear-gradient(to bottom, rgba(10,10,10,0.8), rgba(10,10,10,1)), url('img/Kowakujo.webp') no-repeat center center/cover; border-bottom: 2px solid var(--accent-red);">
+    <header class="guide-header guide-header-kowakujo">
         <h1>Lokalizacja słuchawek</h1>
         <p>Słuchawki możecie zebrać w dowolnej kolejności.</p>
     </header>
@@ -24,21 +24,21 @@
         <div class="step-card">
             <h3><input type="checkbox" id="krok1"> <span>KROK 1: Słuchawki w Stables (Stajnie)</span></h3>
             <p>Udaj się do lokacji Stajnie. Skieruj się do rogu pomieszczenia. Szukaj słuchawek ukrytych za skrzyniami – podejdź i wejdź z nimi w interakcję, aby je aktywować.</p>
-            <img src="img/kowakujo/kowakujo_evencry06.webp" alt="Stajnie" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+            <img src="img/kowakujo/kowakujo_evencry06.webp" alt="Stajnie" class="guide-img">
         </div>
 
         <!-- KROK 2 -->
         <div class="step-card">
             <h3><input type="checkbox" id="krok2"> <span>KROK 2: Słuchawki w Kitchens (Kuchnie)</span></h3>
             <p>Przejdź przez Flower Garden (Ogród kwiatowy) w stronę Kitchens. Wejdź po schodach na górę. Udaj się na tyły pomieszczenia. Słuchawki leżą ukryte zaraz za miską – aktywuj je.</p>
-            <img src="img/kowakujo/kowakujo_evencry07.webp" alt="Kuchnie" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+            <img src="img/kowakujo/kowakujo_evencry07.webp" alt="Kuchnie" class="guide-img">
         </div>
 
         <!-- KROK 3 -->
         <div class="step-card">
             <h3><input type="checkbox" id="krok3"> <span>KROK 3: Słuchawki w Onsen Baths (Łaźnie termalne)</span></h3>
             <p>Leć do lokacji Onsen Baths. Wypatruj regałów/półek znajdujących się w tej sekcji. Słuchawki znajdziesz na samej górze jednej z półek – to ostatni element układanki.</p>
-            <img src="img/kowakujo/kowakujo_evencry08.webp" alt="Łaźnie termalne" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+            <img src="img/kowakujo/kowakujo_evencry08.webp" alt="Łaźnie termalne" class="guide-img">
         </div>
 
         <!-- NAGRODA -->
@@ -47,9 +47,8 @@
             <p>Gdy aktywujesz wszystkie trzy pary, usłyszysz głos Malukah, który przeprowadzi Cię przez kolejne fale niebezpieczeństwa. Lećcie po ulepszenia i cieszcie się muzyką!</p>
         </div>
 
-        <div style="margin-top: 40px;">
+        <div class="nav-buttons-bottom">
             <a href="index.html" class="btn-back-custom">← Powrót do strony głównej</a>
-            <br>
             <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
         </div>
     </section>
@@ -58,11 +57,10 @@
 
    <script>
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    // Pobieramy nazwę pliku, aby klucze były unikalne dla każdej strony
     const pageName = window.location.pathname.split('/').pop(); 
     
     checkboxes.forEach(cb => {
-        const uniqueId = pageName + '-' + cb.id; // Klucz typu: kowakujo-raygun.html-krok1
+        const uniqueId = pageName + '-' + cb.id; 
         const savedState = localStorage.getItem(uniqueId);
         
         if (savedState === 'true') cb.checked = true;

@@ -10,7 +10,7 @@
 
     <nav><a href="index.html" class="nav-logo">Zombie Noobs</a></nav>
 
-    <header class="guide-header" style="margin-top: 80px; padding: 60px 20px; text-align: center; background: linear-gradient(to bottom, rgba(10,10,10,0.8), rgba(10,10,10,1)), url('img/Kowakujo.webp') no-repeat center center/cover; border-bottom: 2px solid var(--accent-red);">
+    <header class="guide-header guide-header-kowakujo">
         <h1>Dokumenty</h1>
         <p>Dokumenty możecie zebrać w dowolnej kolejności.</p>
         <p>Aby zebrać wszystko, najlepiej zacząć od odblokowania Pack-a-Punch, ponieważ część przedmiotów pojawia się dopiero po tym etapie.</p>
@@ -28,9 +28,8 @@
             <p>Dokument 2 (Kuchnia): W Kitchens (Kuchnie), uderzaj w beczki obok automatu Double Tap. Jedna z nich (losowo) upuści dokument.</p>
         </div>
 
-        <div style="margin-top: 40px;">
+        <div class="nav-buttons-bottom">
             <a href="index.html" class="btn-back-custom">← Powrót do strony głównej</a>
-            <br>
             <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
         </div>
     </section>
@@ -39,11 +38,10 @@
 
    <script>
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    // Pobieramy nazwę pliku, aby klucze były unikalne dla każdej strony
     const pageName = window.location.pathname.split('/').pop(); 
     
     checkboxes.forEach(cb => {
-        const uniqueId = pageName + '-' + cb.id; // Klucz typu: kowakujo-raygun.html-krok1
+        const uniqueId = pageName + '-' + cb.id; 
         const savedState = localStorage.getItem(uniqueId);
         
         if (savedState === 'true') cb.checked = true;

@@ -10,7 +10,7 @@
 
     <nav><a href="index.html" class="nav-logo">Zombie Noobs</a></nav>
 
-    <header class="guide-header" style="margin-top: 80px; padding: 60px 20px; text-align: center; background: linear-gradient(to bottom, rgba(10,10,10,0.8), rgba(10,10,10,1)), url('img/Kowakujo.webp') no-repeat center center/cover; border-bottom: 2px solid var(--accent-red);">
+    <header class="guide-header guide-header-kowakujo">
         <h1>Jak Ukończyć Horse Race</h1>
         <p>Ten proces wymaga odnalezienia czterech przedmiotów i wykazania się zręcznością na torze przeszkód.</p>
     </header>
@@ -24,39 +24,47 @@
         <div class="step-card">
             <h3><input type="checkbox" id="krok1"> <span>KROK 1: Zbiórka Marchewek</span></h3>
             <strong>Musisz odnaleźć 4 marchewki ukryte na mapie. Możesz je zbierać w dowolnej kolejności:</strong>
-        <ul>
-            <li><strong>Outer Ward (Zewnętrzny Dziedziniec):</strong> Szukaj beczki stojącej na szczycie skrzyni. Wskocz tam i zabierz marchewkę.</li>
-            <img src="img/kowakujo/kowakujo_horse42.webp" alt="Rejs" style="width: 100%; border-radius: 8px; margin-top: 15px;">
-            <li><strong>Workshop (Warsztat):</strong> Przejdź obok miejsca, gdzie pojawia się Mystery Box. Marchewka leży w wiadrze.</li>
-            <img src="img/kowakujo/kowakujo_horse43.webp" alt="Rejs" style="width: 100%; border-radius: 8px; margin-top: 15px;">
-            <li><strong>Kitchens (Kuchnie):</strong> Idź w stronę budynku za Blossom Tree (Kwitnące drzewo wiśni). Marchewka jest ukryta wśród kapust.</li>
-            <img src="img/kowakujo/kowakujo_horse44.webp" alt="Rejs" style="width: 100%; border-radius: 8px; margin-top: 15px;">
-            <li><strong>Flower Garden (Ogród kwiatowy):</strong> Przejdź przez most i udaj się na dół w stronę punktu ewakuacji (Exfill). Marchewka leży w roślinności obok kwiatów.</li>
-            <img src="img/kowakujo/kowakujo_horse45.webp" alt="Rejs" style="width: 100%; border-radius: 8px; margin-top: 15px;">
-            <li><strong>Wskazówka:</strong> Każda zebrana marchewka automatycznie pojawia się w specjalnym wiadrze w Stajniach.</li>
-        </ul>
+            <ul>
+                <li>
+                    <strong>Outer Ward (Zewnętrzny Dziedziniec):</strong> Szukaj beczki stojącej na szczycie skrzyni. Wskocz tam i zabierz marchewkę.
+                    <img src="img/kowakujo/kowakujo_horse42.webp" alt="Rejs" class="guide-img">
+                </li>
+                <li>
+                    <strong>Workshop (Warsztat):</strong> Przejdź obok miejsca, gdzie pojawia się Mystery Box. Marchewka leży w wiadrze.
+                    <img src="img/kowakujo/kowakujo_horse43.webp" alt="Rejs" class="guide-img">
+                </li>
+                <li>
+                    <strong>Kitchens (Kuchnie):</strong> Idź w stronę budynku za Blossom Tree (Kwitnące drzewo wiśni). Marchewka jest ukryta wśród kapust.
+                    <img src="img/kowakujo/kowakujo_horse44.webp" alt="Rejs" class="guide-img">
+                </li>
+                <li>
+                    <strong>Flower Garden (Ogród kwiatowy):</strong> Przejdź przez most i udaj się na dół w stronę punktu ewakuacji (Exfill). Marchewka leży w roślinności obok kwiatów.
+                    <img src="img/kowakujo/kowakujo_horse45.webp" alt="Rejs" class="guide-img">
+                </li>
+                <li><strong>Wskazówka:</strong> Każda zebrana marchewka automatycznie pojawia się w specjalnym wiadrze w Stajniach.</li>
+            </ul>
         </div>
-            <br>
+        
         <!-- KROK 2 -->
         <div class="step-card">
             <h3><input type="checkbox" id="krok2"> <span>KROK 2: Aktywacja Wyścigu</span></h3>
-            <strong></strong>Gdy masz już wszystkie 4 marchewki, wróć do Stables (Stajnie) do wspomnianego wiadra.</strong>
-        <ul>
-            <li>Wejdź z nim w interakcję. Usłyszysz cytat Takeo o cierpliwości i skupieniu.</li>
-            <li>Nad wiadrem pojawi się mały, lewitujący konik – to znak, że wyścig właśnie się zaczął!</li>
-        </ul>
-            <img src="img/kowakujo/kowakujo_horse46.webp" alt="Rejs" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+            <strong>Gdy masz już wszystkie 4 marchewki, wróć do Stables (Stajnie) do wspomnianego wiadra.</strong>
+            <ul>
+                <li>Wejdź z nim w interakcję. Usłyszysz cytat Takeo o cierpliwości i skupieniu.</li>
+                <li>Nad wiadrem pojawi się mały, lewitujący konik – to znak, że wyścig właśnie się zaczął!</li>
+            </ul>
+            <img src="img/kowakujo/kowakujo_horse46.webp" alt="Rejs" class="guide-img">
         </div>
 
         <!-- KROK 3 -->
         <div class="step-card">
             <h3><input type="checkbox" id="krok3"> <span>KROK 3: Tor Przeszkód i Parkour</span></h3>
-        <ul>
-            <li>Teraz musisz biec wyznaczoną trasą, goniąc konika. Pamiętaj, że goni Cię czas!</li>
-            <li>Boulders (Głazy): Uważaj na gigantyczne głazy, które będą bujać się na Twojej drodze. Jeśli Cię trafią, stracisz cenny czas.</li>
-            <li>Rings (Obręcze): Przebiegaj przez kolorowe obręcze, które wyznaczają trasę.</li>
-            <li>Lava Parkour: Będziesz musiał skakać po małych pluszowych siedziskach nad lawą. Jeśli spadniesz do ognia, wrócisz do ostatniego punktu kontrolnego (Checkpoint).</li>
-        </ul>
+            <ul>
+                <li>Teraz musisz biec wyznaczoną trasą, goniąc konika. Pamiętaj, że goni Cię czas!</li>
+                <li>Boulders (Głazy): Uważaj na gigantyczne głazy, które będą bujać się na Twojej drodze. Jeśli Cię trafią, stracisz cenny czas.</li>
+                <li>Rings (Obręcze): Przebiegaj przez kolorowe obręcze, które wyznaczają trasę.</li>
+                <li>Lava Parkour: Będziesz musiał skakać po małych pluszowych siedziskach nad lawą. Jeśli spadniesz do ognia, wrócisz do ostatniego punktu kontrolnego (Checkpoint).</li>
+            </ul>
         </div>
 
         <!-- KROK 4 -->
@@ -65,7 +73,6 @@
             <ul>
                 <li>Z lawy zaczną wyskakiwać gigantyczne ryby – musisz je omijać!</li>
                 <li>W pewnym momencie ryby zaczną nawet spadać z nieba przez portale. To totalna miazga, więc miej oczy dookoła głowy.</li>
-                
             </ul>
         </div>
 
@@ -80,9 +87,8 @@
         </div>
 
         <!-- Przyciski nawigacyjne na dole -->
-        <div style="margin-top: 40px;">
+        <div class="nav-buttons-bottom">
             <a href="index.html" class="btn-back-custom">← Powrót do strony głównej</a>
-            <br>
             <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
         </div>
     </section>
@@ -91,11 +97,10 @@
 
     <script>
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    // Pobieramy nazwę pliku, aby klucze były unikalne dla każdej strony
     const pageName = window.location.pathname.split('/').pop(); 
     
     checkboxes.forEach(cb => {
-        const uniqueId = pageName + '-' + cb.id; // Klucz typu: kowakujo-raygun.html-krok1
+        const uniqueId = pageName + '-' + cb.id; 
         const savedState = localStorage.getItem(uniqueId);
         
         if (savedState === 'true') cb.checked = true;
