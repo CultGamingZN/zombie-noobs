@@ -498,3 +498,56 @@ footer p {
     align-items: flex-start;
     gap: 10px;
 }
+
+/* --- SCROLL SOLVER (EASTER EGG) --- */
+.puzzle-card {
+    padding: 20px; 
+    margin: 20px 0;
+}
+
+.puzzle-title {
+    text-align: center; 
+    color: var(--accent-red);
+}
+
+.puzzle-controls {
+    margin-top: 15px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.btn-reset {
+    border-color: var(--accent-red);
+}
+
+.btn-reset:hover {
+    background-color: rgba(209, 42, 42, 0.2);
+    box-shadow: 0 0 10px rgba(209, 42, 42, 0.4);
+}
+
+.solution-box {
+    background: #0a0a0a;
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-weight: bold;
+    color: var(--neon-blue);
+    text-align: center;
+}
+
+/* Aktualizacja .puzzle-tile o ustawienia dla układu pionowego, które wcześniej były w JS */
+.puzzle-tile {
+    flex-direction: column;
+}
+
+.puzzle-tile-number {
+    font-size: 10px; 
+    color: #888;
+}
+
+.puzzle-tile-state {
+    font-size: 10px; 
+    color: #fff; 
+    font-weight: bold;
+}
