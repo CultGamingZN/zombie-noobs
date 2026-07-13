@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulepszenie Płapki Upiornego Strzelca - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav><a href="../../index.html" class="nav-logo">Zombie Noobs</a></nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Ulepszenie Płapki Upiornego Strzelca</h1>
+        <p>Ten proces jest całkiem prosty, ale wymaga celnego oka i jednego konkretnego przedmiotu.</p>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Uzbrój się w łuk.</span></h3>
+            <p>Zanim zaczniesz, musisz zdobyć Combat Bow (Łuk bojowy). Możesz go trafić jako losowy łup ze skrzyń lub po prostu kupić przy Stole rzemieślniczym.</p>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Pierwszy strzał przez dziurę.</span></h3>
+            <ul>
+                <li>Udaj się do miejsca, gdzie znajdują się posągi lwów (lokacja pułapki).</li>
+                <li>Aktywuj pułapkę Ghostly Rifleman.</li>
+                <li>Stań za pułapką i spójrz przez okno, w którym znajduje się mały otwór.</li>
+                <li>Musisz strzelić z łuku w tarczę widoczną przez tę dziurę.</li>
+                <li><strong>Uwaga:</strong> Podczas celowania będziesz kaszleć i otrzymywać obrażenia, więc rób to szybko!</li>
+            </ul>
+            <img src="img/kowakujo_plapka_strzelca29.webp" alt="Latająca skała" class="guide-img">
+            <img src="img/kowakujo_plapka_strzelca30.webp" alt="Latająca skała" class="guide-img">
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Wyzwanie w Zasłonie Eterycznej.</span></h3>
+            <ul>
+                <li>Gdy trafisz w tarczę, gra automatycznie aktywuje Zasłonę Eteryczną.</li>
+                <li>Pędź na centralny dziedziniec, gdzie rośnie Blossom Tree (Kwitnące drzewo wiśni Takeo).</li>
+                <li>Na pniu drzewa zaczną pojawiać się kolejne tarcze.</li>
+                <li>Zestrzel je wszystkie z łuku. Jeśli zrobisz to poprawnie, usłyszysz charakterystyczny dźwięk aktywacji.</li>
+            </ul>
+            <img src="img/kowakujo_plapka_strzelca31.webp" alt="Finał" class="guide-img">
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Rytuał masek.</span></h3>
+            <p>Wróć do pułapki. Po jej prawej stronie zobaczysz cztery lewitujące, japońskie maski krążące w kole. Podejdź do nich i wejdź w interakcję. Maski wlecą do posągów lwów, a ich oczy zmienią kolor na żółty.</p>
+            <img src="img/kowakujo_plapka_strzelca32.webp" alt="Finał" class="guide-img">
+        </div>
+
+        <!-- KROK 5 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok5"> <span>KROK 5: Nagroda i finał.</span></h3>
+            <p>W nagrodę posąg wypluje Decoy Grenade (Granat wabiący), który przyda Ci się, gdy będziesz czekać na odnowienie pułapki. Gdy czas odnowienia minie, oczy posągów zaświecą się na zielono – to znak, że ulepszona wersja jest gotowa!</p>
+            <strong>EFEKT:</strong>Ulepszona pułapka strzela laserami, które dodatkowo nakładają efekty Ammo Mods (np. wybuchowe fajerwerki). 
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const pageName = window.location.pathname.split('/').pop(); 
+    
+    checkboxes.forEach(cb => {
+        const uniqueId = pageName + '-' + cb.id; 
+        const savedState = localStorage.getItem(uniqueId);
+        
+        if (savedState === 'true') cb.checked = true;
+        
+        cb.addEventListener('change', () => {
+            localStorage.setItem(uniqueId, cb.checked);
+        });
+    });
+    </script>
+</body>
+</html>

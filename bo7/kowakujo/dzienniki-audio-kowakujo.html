@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzienniki Audio - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav><a href="../../index.html" class="nav-logo">Zombie Noobs</a></nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Dzienniki Audio</h1>
+        <p>Dzienniki audio możecie zebrać w dowolnej kolejności.</p>
+        <p>Aby zebrać wszystko, najlepiej zacząć od odblokowania Pack-a-Punch, ponieważ część przedmiotów pojawia się dopiero po tym etapie.</p>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+       
+        <!-- CZĘŚĆ 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>Część 1: Nagrania i dokumenty (Lokacje Statyczne)</span></h3>
+            <p>Audio Log 1 (Most): Zaraz na początku gry (Spawn), udaj się pod most prowadzący na prawą stronę mapy, niedaleko automatu Quick Revive.</p>
+            <p>Audio Log 2 (Ogród): W lokacji Flower Garden (Ogród kwiatowy), na półce skalnej nad lawą, blisko punktu Vesper.</p>
+            <p>Audio Log 3 (Trening): Wejdź do budynku w Training Area (Obszar treningowy), tam gdzie jest automat Melee Macchiato. Nagranie leży na skrzyni.</p>
+            <p>Audio Log 4 (Magazyn): Wewnątrz sekcji Tenshu, w pomieszczeniu Storage Room. Leży na stole zaraz po wejściu (pojawia się po aktywacji Pack-a-Punch).</p>
+            <p>Audio Log 5 Pizza: Na dachu zamku (Rooftop), przeskocz przez barierkę na zewnętrzną część gzymsu obok maszyny Wunderfiz (Tam gdzie kupujesz wszystkie perki).</p>
+        </div>
+        
+        <!-- CZĘŚĆ 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>Część 2: Intel powiązany z głównym easter eggiem</span></h3>
+            <p>Po scenie z latarnią: W War Room (Pokój wojenny), przed maszyną Pack-a-Punch.</p>
+            <p>Po scenie z maskami: W Storage Room, obok masek.</p>
+            <p>Po scenie z sakiewką: Na Spawnie, obok urządzenia Rampage Inducer.</p>
+            <p>Po scenie z toksyną: Wewnątrz małej wazy w Kitchens.</p>
+            <p>Po scenie z kieliszkiem sake: Na półce, po naprawieniu kieliszka.</p>
+            <p>Po kroku "flex": W Storage Room (jeśli się nie pojawi, sprawdź po rozwiązaniu morderstwa przed walką z bossem).</p>
+        </div>
+        
+        <!-- CZĘŚĆ 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>Część 3: Specialne Intel Takeo</span></h3>
+            <p>WAŻNE: Musisz grać jako Takeo, aby to zdobyć.</p>
+            <br>
+            <p>Użyj granatu psychotropowego pod sobą przed schodami do Pack-a-Punch.</p>
+            <p>Wejdź w interakcję ze swoim sobowtórem w War Room, by wejść w jego wspomnienia i zdobyć katanę Path of Sorrow.</p>
+            <p>Po ukończeniu wyzwania i powrocie z halucynacji, Intel pojawi się obok maszyny Pack-a-Punch.</p>
+        </div>
+
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+   <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const pageName = window.location.pathname.split('/').pop(); 
+    
+    checkboxes.forEach(cb => {
+        const uniqueId = pageName + '-' + cb.id; 
+        const savedState = localStorage.getItem(uniqueId);
+        
+        if (savedState === 'true') cb.checked = true;
+        
+        cb.addEventListener('change', () => {
+            localStorage.setItem(uniqueId, cb.checked);
+        });
+    });
+    </script>
+</body>
+</html>

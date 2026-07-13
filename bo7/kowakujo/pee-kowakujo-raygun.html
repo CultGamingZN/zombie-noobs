@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darmowy Ray Gun i Wizytówka - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav><a href="../../index.html" class="nav-logo">Zombie Noobs</a></nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Darmowy Ray Gun i Wizytówka Parkour</h1>
+        <p>Ten proces wymaga cierpliwości i odrobiny zręczności.</p>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Przygotowanie</span></h3>
+            <p>Zanim zaczniesz szukać skarbów, musisz ukończyć standardowy proces odblokowania maszyny <span class="accent">Pack-a-Punch</span>. Gra poprowadzi Cię za rękę przez ten etap. Bez tego zapomnij o dalszej zabawie.</p>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Polowanie na "Latający Głaz"</span></h3>
+            <p>Udaj się w okolice lawy obok miejsca, gdzie znajduje się automat z Perk-a-Cola <span class="accent">Melee Macchiato</span>. Stań przy samej krawędzi i czekaj. Musisz liczyć na szczęście, aż w lawie pojawi się unosząca się skała. Może to chwilę potrwać, więc miej oczy dookoła głowy!</p>
+            <img src="img/kowakujo02.webp" alt="Latająca skała" class="guide-img">
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Rejs przez lawę</span></h3>
+            <p>Gdy skała podpłynie blisko, wskocz na nią. To magiczny moment – większość zombie przestanie Cię atakować i po prostu wejdzie za Tobą do lawy. <span class="accent">Uważaj jednak</span>, bo niektóre zgniłki mogą nadal rzucać w Ciebie mięchem. Płyń na skale, aż dotrzesz do zniszczonego domu. Tam wskocz na dach.</p>
+            <img src="img/kowakujo03.webp" alt="Rejs" class="guide-img">
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Wyzwanie Parkour (Czasówka!)</span></h3>
+            <p>Gdy tylko dotkniesz dachu, aktywuje się tor przeszkód. Pojawi się licznik czasu (masz około 42 sekundy na start).</p>
+            <ul>
+                <li><strong>Zasada:</strong> Musisz skakać po lewitujących skałach, drzwiach i deskach.</li>
+                <li><strong>Checkpointy:</strong> Szukaj posągów lwów z zielonymi, świecącymi oczami. Gdy do nich dotrzesz, czas zostanie przedłużony.</li>
+                <li><strong>Mechanika:</strong> Koniecznie używaj funkcji <span class="accent">wall jump</span> (skok po ścianie) – bez tego nie przejdziesz trudniejszych sekcji. Polecam też wyciągnąć broń Melee, żeby biegać szybciej.</li>
+            </ul>
+            <img src="img/kowakujo04.webp" alt="Parkour" class="guide-img">
+        </div>
+
+        <!-- KROK 5 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok5"> <span>KROK 5: Finałowy skok</span></h3>
+            <p>Ostatni skok jest najtrudniejszy! Musisz wziąć solidny rozbieg, żeby dolecieć do celu. Jeśli spadniesz, wrócisz do ostatniego checkpointu, ale <span class="accent">jeśli czas się skończy</span> – musisz czekać na nową skałę w lawie w kolejnych rundach.</p>
+            <img src="img/kowakujo05.webp" alt="Finał" class="guide-img">
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3><input type="checkbox" id="nagroda"> <span>NAGRODA</span></h3>
+            <p>Po ukończeniu toru wrócisz na główną mapę, gdzie z ziemi wyłonią się cztery posągi lwów (identyczne jak w World at War). Podejdź do nich i odbierz swój darmowy <strong>Ray Gun</strong>! Dodatkowo wpadnie Ci <strong>Calling Card</strong> za ukończenie toru przeszkód.</p>
+            <img src="img/kowakujo01.webp" alt="Nagroda" class="guide-img">
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const pageName = window.location.pathname.split('/').pop(); 
+    
+    checkboxes.forEach(cb => {
+        const uniqueId = pageName + '-' + cb.id; 
+        const savedState = localStorage.getItem(uniqueId);
+        
+        if (savedState === 'true') cb.checked = true;
+        
+        cb.addEventListener('change', () => {
+            localStorage.setItem(uniqueId, cb.checked);
+        });
+    });
+    </script>
+</body>
+</html>

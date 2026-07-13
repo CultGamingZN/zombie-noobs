@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Ukończyć Horse Race - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav><a href="../../index.html" class="nav-logo">Zombie Noobs</a></nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Jak Ukończyć Horse Race</h1>
+        <p>Ten proces wymaga odnalezienia czterech przedmiotów i wykazania się zręcznością na torze przeszkód.</p>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Zbiórka Marchewek</span></h3>
+            <strong>Musisz odnaleźć 4 marchewki ukryte na mapie. Możesz je zbierać w dowolnej kolejności:</strong>
+            <ul>
+                <li>
+                    <strong>Outer Ward (Zewnętrzny Dziedziniec):</strong> Szukaj beczki stojącej na szczycie skrzyni. Wskocz tam i zabierz marchewkę.
+                    <img src="img/kowakujo_horse42.webp" alt="Rejs" class="guide-img">
+                </li>
+                <li>
+                    <strong>Workshop (Warsztat):</strong> Przejdź obok miejsca, gdzie pojawia się Mystery Box. Marchewka leży w wiadrze.
+                    <img src="img/kowakujo_horse43.webp" alt="Rejs" class="guide-img">
+                </li>
+                <li>
+                    <strong>Kitchens (Kuchnie):</strong> Idź w stronę budynku za Blossom Tree (Kwitnące drzewo wiśni). Marchewka jest ukryta wśród kapust.
+                    <img src="img/kowakujo_horse44.webp" alt="Rejs" class="guide-img">
+                </li>
+                <li>
+                    <strong>Flower Garden (Ogród kwiatowy):</strong> Przejdź przez most i udaj się na dół w stronę punktu ewakuacji (Exfill). Marchewka leży w roślinności obok kwiatów.
+                    <img src="img/kowakujo_horse45.webp" alt="Rejs" class="guide-img">
+                </li>
+                <li><strong>Wskazówka:</strong> Każda zebrana marchewka automatycznie pojawia się w specjalnym wiadrze w Stajniach.</li>
+            </ul>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Aktywacja Wyścigu</span></h3>
+            <strong>Gdy masz już wszystkie 4 marchewki, wróć do Stables (Stajnie) do wspomnianego wiadra.</strong>
+            <ul>
+                <li>Wejdź z nim w interakcję. Usłyszysz cytat Takeo o cierpliwości i skupieniu.</li>
+                <li>Nad wiadrem pojawi się mały, lewitujący konik – to znak, że wyścig właśnie się zaczął!</li>
+            </ul>
+            <img src="img/kowakujo_horse46.webp" alt="Rejs" class="guide-img">
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Tor Przeszkód i Parkour</span></h3>
+            <ul>
+                <li>Teraz musisz biec wyznaczoną trasą, goniąc konika. Pamiętaj, że goni Cię czas!</li>
+                <li>Boulders (Głazy): Uważaj na gigantyczne głazy, które będą bujać się na Twojej drodze. Jeśli Cię trafią, stracisz cenny czas.</li>
+                <li>Rings (Obręcze): Przebiegaj przez kolorowe obręcze, które wyznaczają trasę.</li>
+                <li>Lava Parkour: Będziesz musiał skakać po małych pluszowych siedziskach nad lawą. Jeśli spadniesz do ognia, wrócisz do ostatniego punktu kontrolnego (Checkpoint).</li>
+            </ul>
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Rybia Masakra</span></h3>
+            <ul>
+                <li>Z lawy zaczną wyskakiwać gigantyczne ryby – musisz je omijać!</li>
+                <li>W pewnym momencie ryby zaczną nawet spadać z nieba przez portale. To totalna miazga, więc miej oczy dookoła głowy.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3><input type="checkbox" id="nagroda"> <span>Meta i Nagrody </span></h3>
+            <ul>
+                <li>Wyścig kończy się, gdy wskoczysz w ostatni, zielony portal.</li>
+                <li>Twoja nagroda zależy od tego, jak szybko ukończysz trasę. Najlepszą nagrodą jest Gold Trophy (Złote Trofeum).</li>
+            </ul>
+            <strong>Możliwy łup:</strong> Darmowy Mystery Perk, Złom, Scorestreaki, a przy odrobinie szczęścia nawet Perma Perk.
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const pageName = window.location.pathname.split('/').pop(); 
+    
+    checkboxes.forEach(cb => {
+        const uniqueId = pageName + '-' + cb.id; 
+        const savedState = localStorage.getItem(uniqueId);
+        
+        if (savedState === 'true') cb.checked = true;
+        
+        cb.addEventListener('change', () => {
+            localStorage.setItem(uniqueId, cb.checked);
+        });
+    });
+    </script>
+</body>
+</html>
