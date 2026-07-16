@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Klucz Przywołania - Paradox Junction | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-paradox">
+        <h1>Jak Zdobyć Relikt Klucz Przywołania</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Musisz grać w trybie Cursed na poziomie co najmniej Tier 1 .</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/klucz_przywolania.webp" alt="Relikt Klucz Przywołania" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Wybuchowy prezent</span></h3>
+            <ul>
+                <li>Udaj się do zniszczonej wersji mapy. Znajdź komin na dachu Greenhouse (Zielony dom). Komin znajduje sie obok zegara.</li>
+                <li>Rzuć w niego granatem – jeśli trafisz idealnie, nastąpi eksplozja, a z komina wyleci obroża. Podnieś ją – to Twój pierwszy element układanki.</li>
+            </ul>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Najlepszy przyjaciel człowieka </span></h3>
+            <ul>
+                <li>Przenieś się do klasycznej, nienaruszonej wersji Nuketown. Będziesz potrzebować modyfikacji amunicji Zgnilizna mózgu.</li>
+                <li>Udaj się do ogrodu za Yellow House (Żółty Dom).</li>
+                <li>Użyj Brain Rot na psie. Gdy go „zwerbujesz”, pies pobiegnie w głąb ogrodu i wykopie z ziemi Piłke. Zabierz piłkę prosto z pyska psa.</li>
+            </ul>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Ostateczne poświęcenie</span></h3>
+            <ul>
+                <li>To najbardziej szalony krok. Musisz przetrwać do 40. rundy. Gdy wybije czterdziestka, udaj się na sam tył ogrodu przy Greenhouse.</li>
+                <li>Teraz uwaga: musisz się tam downować (powalenie gracza).</li>
+                <li>Po Twoim upadku w tym miejscu pojawi się Nagrobek. Wejdź z nim w interakcję, używając obu zdobytych przedmiotów (obroży i piłki), aby odblokować wyzwanie.</li>
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Sugeruję użycie gumy Posmak, abyś po podniesieniu się nie stracił wszystkich swoich Perk-a-Cola.</p>
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Próba Czasowa </span></h3>
+            <ul>
+                <li>Sama próba znajduje się w klasycznym Nuketown, po prawej stronie Żółtego Domu.</li>
+                <li>Jest to time trial (próba czasowa). Masz tylko 90 sekund na każdą falę przeciwników. Musisz wyeliminować wszystkie zombie oraz elity. Wyścig z czasem to nie żarty, więc miej w łapach ulepszony sprzęt.</li>
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Archiwa sugerują użycie Maszyna Wojenna, aby szybko oczyścić teren z hordy.</p>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Klucz Przywołania</h3>
+            <ul>
+                <li><strong>EFEKT:</strong> Sprawia on, że zombie po śmierci wybuchają, siejąc jeszcze większe spustoszenie w szeregach nieumarłych. To absolutna miazga na wysokich rundach!</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

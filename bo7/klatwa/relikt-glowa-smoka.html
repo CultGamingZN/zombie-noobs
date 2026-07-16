@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Głowa Smoka - Ashes Of The Damned | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-ashes">
+        <h1>Jak Zdobyć Relikt Głowa Smoka</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Musisz mieć ukończone główne zadanie w Ashes Of The Damned. Mecz musisz odpalić na poziomie Tier 2. Wyzwanie aktywuje się od rundy 60+.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/glowa_smoka.webp" alt="Relikt Głowa Smoka" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Grind do 60 rundy:</span></h3>
+            <ul>
+                <li>Dostań się do Rundy 60.</li>
+                <li>Musisz pokonać finałowego bossa głównego zadania na tej rundzie lub wyższej.</li>
+            </ul>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Portal:</span></h3>
+            <p>Gdy usłyszysz demoniczny śmiech Mr Peaks po walce na 60. rundzie, czas na właściwą próbę:</p>
+            <ul>
+                <li>Udaj się do chaty nad Blackwater Lake (Jezioro Blackwater).</li>
+                <li>Znajdziesz tam Red Portal (Czerwony portal) prowadzący do wyzwania.</li>
+                <li>W ekipie musicie zagłosować, aby wejść do środka.</li>
+            </ul>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Wybuchowa próba:</span></h3>
+            <p>Zasady walki wewnątrz portalu zmieniają się drastycznie – Twoje standardowe kule nic nie zdziałają:</p>
+            <ul>
+                <li><strong>Tylko Eksplozje:</strong> Przeciwnicy mogą otrzymać obrażenia wyłącznie od broni i materiałów wybuchowych.</li>
+                <li><strong>Zalecany Arsenał:</strong> Ray Gun, RPG, Kusza oraz Necrofluid Gauntlet (Rękawica Nekrofluidu) – jej naładowane strzały wybuchowe są tutaj kluczowe.</li>
+                <li><strong>Struktura:</strong> Musisz przetrwać 6 fal.</li>
+                <li><strong>Bossowie:</strong> W rundach 3 i 6 pojawią się cele HVT (Cele o wysokiej wartości), na których musisz skupić cały swój ogień wybuchowy.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Głowa Smoka</h3>
+            <p>Co on robi po aktywacji?</p>
+            <ul>
+                <li><strong>EFEKT:</strong> To powrót do korzeni hardkorowego survivalu – relikt całkowicie wyłącza wszystkie Ammo Caches (Skrzynie z amunicją) na mapie. 
+                    Zapomnij o łatwym uzupełnianiu zapasów – od teraz liczy się każdy nabój, a Twoim jedynym ratunkiem będą bonusy Max Ammo, GobbleGums lub zadania u TED-a.</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

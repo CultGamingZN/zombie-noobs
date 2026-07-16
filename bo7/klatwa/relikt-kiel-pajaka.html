@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Kieł Pająka - Astra Malorum | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-astra">
+        <h1>Jak Zdobyć Relikt Kieł Pająka</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Musicie grać w trybie Klątwa na poziomie trudności co najmniej Tier 1.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/kiel_pajaka.webp" alt="Relikt Kieł Pająka" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Build pod rytuał.</span></h3>
+            <p>Aby wyzwanie w ogóle się aktywowało, potrzebujecie konkretnego zestawu Perk-a-Cola i ulepszeń:</p>
+            <ul>
+                <li><strong>Wisp Tea (Herbata Ognika):</strong> To podstawa. Wybierzcie ulepszenia na większe obrażenia i szybsze odnawianie ognika.</li>
+                <li><strong>Melee Macchiato:</strong> Załóżcie ulepszenia zwiększające obrażenia ataku wręcz.</li>
+                <li><strong>Ether Shroud (Zasłona Eteryczna):</strong> Niezbędna, by podejść do celu bez stresu.</li>
+                <li><strong>Insta-kill (Natychmiastowe zabicie):</strong> Warto mieć tę gumę pod ręką, żeby zwiększyć siłę ciosu nożem.</li>
+            </ul>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Polowanie na Oskara (Runda 40+)</span></h3>
+            <p>Relikt wymaga od Was zabójstwa Oskara w bardzo specyficzny sposób:</p>
+            <ul>
+                <li>Gdy zrespi się O.S.C.A.R., musicie go osłabić dowolną bronią, ale ostateczny cios musi być synchroniczny.</li>
+                <li><strong>Zasada:</strong> Musisz zabić Oscara atakiem Melee (wręcz/nożem) w momencie, gdy jest on pod ciągłym atakiem Twojego Wisp (Ognika).</li>
+                <li><strong>Strategia:</strong> Odpal Ether Shroud, co sprawi, że Oscar natychmiast opuści tarczę. Wtedy uderzaj nożem, gdy ognik go „smaży”.</li>
+            </ul>
+            <p>Jeśli zrobicie to dobrze, usłyszycie śmiech Mr Peaks.</p>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Próba bez Atutów</span></h3>
+            <p>Udajcie się do Library (Biblioteka). Naprzeciwko automatu ze Stamin-Upem znajdziecie portal do próby.</p>
+            <ul>
+                <li><strong>Wyzwanie:</strong> Gra zabierze Wam wszystkie Perk-a-Cola. Będziecie musieli przetrwać 3 fale zombie oraz 2 fale HVT (Cele o wysokiej wartości), w tym walkę z Uber Classem i ponownie z Oscarem.</li>
+            </ul>
+             <p class="text-red"><strong>PRO TIP:</strong> Choć standardowe perki znikają, Eternal Perks (Wieczne atuty) zostają z Wami podczas próby! Zróbcie jak najwięcej zadań TED-a przed wejściem, by mieć tę przewagę.</p>
+        </div>
+        
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Kieł Pająka</h3>
+            <p>To prawdziwa miazga dla portfela.</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Sprawia, że ceny perków w automatach nigdy nie spadają. Z każdym kolejnym zakupem cena będzie tylko rosła, więc zarządzanie Punktami staje się kluczowe.
+                    Jeśli padniecie na wysokiej rundzie, powrót do pełnej formy będzie kosztował fortunę!</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

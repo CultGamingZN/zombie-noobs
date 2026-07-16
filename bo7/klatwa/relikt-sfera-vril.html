@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Sfera Vril - Ashes Of The Damned | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-ashes">
+        <h1>Jak Zdobyć Relikt Sfera Vril</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Musisz mieć ukończone główne zadanie na mapie Ashes Of The Damned. Musisz grać na poziomie Tier 1. Wyzwanie rozpocznie się od rundy 40+.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/sfera_vril.webp" alt="Relikt Sfera Vril" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Cierpliwość:</span></h3>
+            <p>Waszym pierwszym zadaniem jest przetrwanie. Musicie dobić do 40. rundy. Dopiero od tego momentu na mapie zaczną spawnować się przeciwnicy typu Doppleghast, którzy są niezbędni do rozpoczęcia wyzwania.</p>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Płapka na Doppleghasta:</span></h3>
+            <p>To zadanie wymaga nieco zręczności:</p>
+            <ul>
+                <li>Znajdź Doppleghast i zwab go w okolice dowolnego Jump pad (Platforma do skakania).</li>
+                <li>Musisz sprawić, by zombie wszedł na platformę razem z Tobą.</li>
+                <li>Użyj platformy (wystrzel się w górę) dokładnie wtedy, gdy Doppleghast na niej stoi. Jeśli zrobisz to dobrze, platforma go zabije, a Ty usłyszysz złowieszczy śmiech Mr. Peaks.</li>
+            </ul>
+            
+            <img src="img/sfera_vril01.webp" alt="Bębny w Kuchni" class="guide-img">
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Portal:</span></h3>
+            <ul>
+                <li>Po udanym zabójstwie Doppleghast pędźcie do Zarya Cosmo Drrome.</li>
+                <li>Pojawi się tam żółty portal – to brama do Waszej próby.</li>
+            </ul>
+            
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Próba:</span></h3>
+            <p>Po wejściu w portal gra nałoży żółty filtr, a zasady drastycznie się zmienią:</p>
+            <ul>
+                <li><strong>Wyzwanie:</strong> Wszystkie Zakupy zostają zablokowane. Nie kupicie amunicji, perków ani broni ze ścian.</li>
+                <li><strong>Przetrwanie:</strong> Musicie przeżyć 5 fal zombie.</li>
+                <li><strong>Zasoby:</strong> Ponieważ nie możecie kupić amunicji, musicie polegać na tym, co wypadnie z wrogów. Możecie również używać Gobblegumów.</li>
+                <li><strong>Finał:</strong> W ostatniej, 5. fali, pojawią się HVTs (Cele o wysokiej wartości). Skupcie na nich całą siłę ognia, aby zakończyć próbę.</li>
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Bardzo przydatny jest perk Vulture (Atut Sępa), który pozwala zbierać paczki amunicji z ziemi.</p>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Sfera Vril</h3>
+            <p>Co daje ten relikt po aktywacji?</p>
+            <ul>
+                <li><strong>EFEKT:</strong> To prawdziwy powrót do korzeni – wprowadza on limit 4 perków (Perk-a-Cola) na grę, dokładnie tak jak w klasycznych trybach Zombies. 
+                    Co gorsza, większość Easter Eggów na darmowe perki przestanie działać (nowy perk zastąpi najstarszy zamiast się dodać).</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

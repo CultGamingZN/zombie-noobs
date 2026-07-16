@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Złoty Widelec - Astra Malorum | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-astra">
+        <h1>Jak Zdobyć Relikt Złoty Widelec</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Zadanie wymaga gry na poziomie trudności Tier 2 w trybie Klątwa. Wyzwanie aktywuje się od rundy 60+.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/zloty_widelec.webp" alt="Relikt Złoty Widelec" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Dostęp do Marsa i ekwipunek:</span></h3>
+            <p>Waszym pierwszym celem jest dotarcie do sekcji Mars na mapie Astra Malorum w ramach postępów w głównym zadaniu. Zanim tam ruszycie, musicie mieć w łapach:</p>
+            <ul>
+                <li><strong>Działo Manglera:</strong> Nagroda za serię punktów.</li>
+                <li><strong>Granaty Wabiące:</strong> Niezbędne do zgrupowania hordy.</li>
+            </ul>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Rytuał międzywymiarowego strzału:</span></h3>
+            <p>To zadanie wymaga wyczucia czasu i sporej ilości trupów na mapie:</p>
+            <ul>
+                <li>Udajcie się na szczyt Temple (Świątynia) na Marsie.</li>
+                <li>Oddajcie jeden strzał z Mangler Cannon bezpośrednio w portal teleporter prowadzący z powrotem na Ziemię.</li>
+                <li>NATYCHMIAST sami wskoczcie w ten portal, wracając do lokacji Machina Astralis.</li>
+                <li>Macie około 10-15 sekund. Pędźcie na środek Red Ritual (Czerwony Rytuał) – kręgu namalowanego na ziemi między teleporterem a biblioteką (Archive of Orbis).</li>
+                    <img src="img/zloty_widelec01.webp" alt="Relikt Złoty Widelec" class="guide-img">
+                <li>Rzućcie pod nogi Decoy Grenade, aby zebrać wokół siebie jak najwięcej zombie.</li>
+                <li>Pocisk z działa przyleci przez portal z opóźnieniem i musi zabić dużą grupę wrogów wewnątrz kręgu. Jeśli usłyszycie śmiech Mr Peaks, rytuał jest zaliczony.</li>
+            </ul>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Portal i próba:</span></h3>
+            <p>W lokacji Miejsce Katastrofy, między automatem Quick Revive a maszyną GobbleGum, pojawi się czerwony portal.</p>
+            <ul>
+                <li><strong>Hip-fire ONLY:</strong> Przeciwnicy mogą otrzymywać obrażenia WYŁĄCZNIE podczas strzelania z biodra.</li>
+                <li><strong>Struktura:</strong> Musicie przetrwać 6 fal.</li>
+                <li><strong>HVTs:</strong> Połowa rundy oraz finałowa szósta fala to starcia z Celami o Wysokim Znaczeniu.</li>
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Cudowna broń LGM-1 jest tu totalną miazgą, ponieważ naturalnie używa się jej do strzelania z biodra i ma nieskończoną amunicję.</p>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Złoty Widelec</h3>
+            <p>To prawdziwe wyzwanie dla twardzieli</p>
+            <ul>
+                <li><strong>EFEKT:</strong> powoduje, że zombie zadają Ci podwójne obrażenia. Przygotujcie się na szybkie zgony, jeśli Wasz pancerz zawiedzie. To najwyższa szkoła przetrwania w mroku Elementu 115!</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

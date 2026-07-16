@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Pióro Prawnika - Ashes Of The Damned | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-ashes">
+        <h1>Jak Zdobyć Relikt Pióro Prawnika</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Musisz ukończyć główne zadanie na mapie Ashes Of The Damned. Zadanie aktywuje się od rundy 20+.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/pioro_prawnika.webp" alt="Relikt Pióro Prawnika" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Wymagane narzędzia:</span></h3>
+            <ul>
+                <li><strong>Ekwipunek:</strong> Potrzebujesz modyfikacji amunicji Napalm Burst (Wybuch Napalmu) na broni LUB Molotovs (Mołotowy). Musisz mieć czym podpalić świece.</li>
+            </ul>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Zapalenie trzech świec</span></h3>
+            <p>Musisz odnaleźć i podpalić trzy świece ukryte na mapie. Możesz to zrobić w dowolnej kolejności, ale najlepiej zacząć od tych w Ashwood.</p>
+            <ul>
+                <li><strong>Ruby Rabbit (Ashwood):</strong>Wejdź do klubu Ruby Rabbit. Świeca znajduje się w rogu, bezpośrednio pod schodami. Po prawej od JaggerNog</li>
+                <img src="img/pioro_prawnika03.webp" alt="Bębny w Kuchni" class="guide-img">
+                <li><strong>Lost Cabins (Tunel Ashwood – Blackwater Lake):</strong> Udaj się do tunelu łączącego Ashwood z jeziorem. Świeca stoi na małej szafce (szufladzie) między sofą a szafą w jednej z chat.</li>
+                <img src="img/pioro_prawnika02.webp" alt="Bębny w Kuchni" class="guide-img">
+                <li><strong>Van Dorn Farm:</strong> Wejdź na piętro domu na farmie. Świeca znajduje się tuż obok łóżka.</li>
+                <img src="img/pioro_pranika01.webp" alt="Bębny w Kuchni" class="guide-img">
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Świecę na farmie zapalcie jako ostatnią, bo to tam pojawi się portal do wyzwania.</p>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Próba:</span></h3>
+            <p>Gdy zapalisz wszystkie świece, przy domu na farmie otworzy się zielony portal.</p>
+            <ul>
+                <li><strong>Przygotowanie:</strong> Upewnij się, że masz solidne Perki i ulepszoną broń. Jeśli grasz w ekipie, musicie zagłosować, aby wejść.</li>
+                <li><strong>Wyzwanie:</strong> Zostaniesz przeteleportowany do wersji mapy z zielonym filtrem. Twoim zadaniem jest przetrwanie 4 fal, w których będą atakować Cię wyłącznie Shock Mimics (Szokowe Mimiki).</li>
+                <li><strong>Postęp:</strong> Na ekranie zobaczysz pasek postępu pokazujący, ilu wrogów musisz jeszcze wyeliminować.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Pióro Prawnika</h3>
+            <p>Co daje ten relikt po aktywacji?</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Mimic Props: Na mapie zaczną pojawiać się Mimiki udające elementy otoczenia (rekwizyty). Normalnie nie występują one w ten sposób, więc to dodatkowe, dość irytujące zagrożenie, gdy najmniej się go spodziewasz.</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Autobus - Ashes Of The Damned | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Jak Zdobyć Relikt Autobus</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Musisz mieć ukończone główne zadanie w Ashes Of The Damned. Mecz musisz rozpocząć na poziomie Tier 2. Wyzwanie dostępne jest od rundy 60+.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/autobus.webp" alt="Relikt Autobus" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Wyzwanie „Nietykalnego” (Runda 60+)</span></h3>
+            <p>Musicie dotrzeć do Rundy 60 i przetrwać całą rundę, nie otrzymując absolutnie żadnych obrażeń.</p>
+            <ul>
+                <li><strong>Najlepsza Strategia:</strong> Wykorzystajcie pojazd Old Tessie (Tereska). Lub wykorzystaj płapkę na Farmie podczas rundy specialnej.</li>
+                <li><strong>Jak to zrobić:</strong> Poczekajcie na rundę z Ravagers (Niszczyciele). Wsiądźcie do Tessie i używajcie głowy Abominacji w Ashwood, aby przebijać się przez tłumy wrogów. Lub użyj Kazmirów i płapki na Farmie.</li>
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Możecie wjeżdżać do garażu, aby zyskać chwilę na naprawę/leczenie pojazdu. Jeśli przetrwacie rundę bez trafienia, usłyszycie złowieszczy śmiech Mr Peaks.</p>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Czerwony Portal w Przystani</span></h3>
+            <ul>
+                <li>Po udanym zaliczeniu rundy „bez hita”, udajcie się nad Blackwater Lake (Jezioro Blackwater).</li>
+                <li>Wewnątrz Boat House pojawi się Czerwony portal.</li>
+                <li>Podejdźcie i wejdźcie w interakcję, aby rozpocząć głosowanie (jeśli gracie w ekipie).</li>
+            </ul>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Próba Zgnilizny Mózgu:</span></h3>
+            <p>Zostaniecie przeniesieni do wyzwania, które wywróci Waszą walkę do góry nogami. Twoja broń nie zadaje bezpośrednich obrażeń zombie!</p>
+            <ul>
+                <li><strong>Zasada:</strong> Zombie mogą zostać zabite wyłącznie przez inne zombie.</li>
+                <li><strong>Niezbędny Ekwipunek:</strong> Musicie posiadać modyfikację amunicji Zgnilizna mózgu.</li>
+                <li><strong>Zalecany Build:</strong> Echo 12 lub Akita (Strzelba): Świetnie infekuje wielu wrogów naraz.</li>
+                <li><strong>Elemental Pop (Atut):</strong> Z augmentem Citrus Focus (Cytrusowe Skupienie), aby częściej aktywować Zgniliznę Mózgu.</li>
+                <li><strong>Decoy Grenades (Granaty Wabiące):</strong> Pomogą zebrać zombie w grupę, aby zainfekowany osobnik miał kogo bić.</li>
+                <li><strong>Struktura próby:</strong> Musicie przetrwać 6 fal.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Autobus</h3>
+            <p>Co on robi po aktywacji?</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Wprowadza prawdziwy survivalowy koszmar. Wszyscy przeciwnicy w grze powoli regenerują zdrowie, jeśli nie zostaną zabici natychmiast. 
+                    To sprawia, że każda walka musi być szybka i decydująca, bo chwila przerwy pozwoli hordzie wrócić do pełni sił.</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Nasiono - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Jak Zdobyć Relikt Nasiono</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Wyzwanie wykonujesz w tym trybie na dowolnym poziomie trudności.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/nasiono.webp" alt="Relikt Nasiono" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Odnalezienie porzuconej broni (Runda 20+)</span></h3>
+            <p>Gdy tylko wybije Runda 20, w jednym z sześciu losowych miejsc na mapie pojawi się pistolet o szarej rzadkości. Lokalizacje:</p>
+            <ul>
+                <li><strong>Observatory Dome (Kopuła Obserwatorium):</strong> Na ścianie lub bezpośrednio pod maszyną Pack-a-Punch.</li>
+                <li><strong>Machina Astralis:</strong> Przy przednim lub tylnym wejściu do tej lokacji.</li>
+                <li><strong>Stellar Dissector:</strong> W korytarzu tuż za maszyną.</li>
+                <li><strong>Luminarium:</strong> W małym pomieszczeniu, gdzie leżą słuchawki Mr Peaks.</li>
+            </ul>
+            <p class="text-red"><strong>UWAGA:</strong> Ravagers (Niszczyciele) mogą "zjeść" ten pistolet, jeśli znajdą go na ziemi! Jeśli broń zniknie, musicie zapisać grę, wyjść i wczytać ją ponownie, aby pistolet zrespił się w innym miejscu.</p>
+                    <img src="img/nasiono_mapa.webp" alt="Nasiono Mapa" class="guide-img">
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Matematyka Śmierci</span></h3>
+            <p>To jest moment, w którym sprawdzicie swój ziomalski spokój. Musisz zabić tym konkretnym pistoletem dokładnie tyle zombie, ile wynosi numer Twojej aktualnej rundy.
+                Jeśli podniosłeś pistolet w 20. rundzie – musisz zdobyć nim równe 20 zabójst. Jeśli się pomylisz musisz pominąć rundę.</p>
+            <ul>
+                <li>Gdy zdobędziesz wymaganą liczbę zabójstw, resztę rundy musisz dokończyć inną bronią. Jeśli zrobisz to dobrze, usłyszysz śmiech Mr Peaks</li>
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Użyj Tabeli wyników, aby śledzić licznik zabójstw tą konkretną bronią. 
+                Możesz ulepszyć ten pistolet w Pack-a-Punch i podnieść jego rzadkość w Arsenale, aby łatwiej kosić trupy. Możesz też użyc Insta KIll.</p>
+            <p class="text-red"><strong>OSTRZEŻENIE:</strong> Unikaj modyfikacji amunicji (Ammo Mods) oraz perków takich jak Elemental Pop, Wisp T czy PhD Flopper – ich efekty obszarowe mogą nabić przypadkowe zabójstwa i zepsuć Twój precyzyjny licznik.</p>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Próba Nasiona</span></h3>
+            <p>W Kopule Obserwatorium, po lewej stronie od skrzyni z amunicją, otworzy się zielony portal. Po wejściu w niego zacznie się totalna miazga:</p>
+            <ul>
+                <li><strong>Wyzwanie:</strong> Musisz przetrwać 4 fale zombie, używając wyłącznie pistoletu z ulepszeniem Pack-a-Punch na 1. poziomie.</li>
+                <li><strong>Struktura:</strong> Fale 1 i 3 to zwykłe zombie i Mimiki, natomiast fale 2 i 4 to starcia z potężnymi bossami typu HVT Mimik.</li>
+                <li>Przed wejściem uzupełnij naboje i perki, bo w trakcie próby nie zmienisz pistoletu na nic innego.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Nasiono</h3>
+            <p>Ten relikt to totalna miazga dla fanów czystych obrażeń:</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Całkowicie wyłącza on Mystery Box (Tajemnicza Skrzynia) w meczu. Będziecie musieli polegać wyłącznie na swojej broni startowej, zakupach ze ścian oraz cudownych broniach. 
+                    Poczujecie mrok, w którym każda kupiona broń musi być przemyślana!</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

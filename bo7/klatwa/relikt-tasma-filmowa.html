@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Taśma Filmowa - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Jak Zdobyć Relikt Taśma Filmowa</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Aktualnie ten relikt możecie zdobyć w dowolnej rundzie, więc nie musicie czekać do wysokich fal, aby zacząć rytuał.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/tasma_filmowa.webp" alt="Relikt Taśma Filmowa" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Przygotowanie i wymagania.</span></h3>
+            <p>Zanim w ogóle wejdziecie do gry, musicie spełnić kilka warunków:</p>
+            <ul>
+                <li><strong>Poziom trudności:</strong> Musisz grać na poziomie Poziom Klątwy 1 lub wyższym – upewnij się, że masz założone jakiekolwiek inne relikty przed startem.</li>
+                <li><strong>Zasoby:</strong> NIE zakładaj reliktu Matryoshka, ponieważ w tej misji będziesz potrzebować jak najwięcej złomu.</li>
+                <li><strong>Guma:</strong> Bardzo polecam zabrać Trupi Łup, która pomoże Ci zebrać więcej złomu.</li>
+                <li><strong>Broń:</strong> Pamiętaj aby na broni której będziesz używał w grze mieć założony tłumik który da ci więcej złomu.</li>
+            </ul>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Aktywacja</span></h3>
+            <p>Aby portal do wyzwania w ogóle się pojawił, musisz wykonać konkretne zadanie na mapie:</p>
+            <ul>
+                <li>Musisz ulepszyć w maszynie Pack-a-Punch 10 różnych, unikalnych broni. Broń kupiona z pomocą gumy na poziom pierwszy P&P nie jest liczona do wyzwania.</li>
+                <li>Wystarczy ulepszyć każdą z nich tylko raz (Level 1).</li>
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Szukaj kryształów od Mr. Peeks, które dają darmowe ulepszenie, lub użyj ulepszenia Pack Mule dla atutu Mule Kick, aby ułatwić sobie proces.</p>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Wejście do Portalu.</span></h3>
+            <p>Gdy ulepszysz dziesiątą broń, portal pojawi się w lokacji Tea Garden (Ogród herbaciany). Przygotuj się, zanim do niego wejdziesz!</p>
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Wyzwanie – Deszcz Ognia </span></h3>
+            <p>Zasada wyzwania jest brutalna: wrogów można zabić TYLKO za pomocą Scorestreaks (Nagrody za punkty).</p>
+            <ul>
+                <li>Czeka Cię 5 fal przeciwników.</li>
+                <li>W każdej fali musisz użyć innego Scorestreaka wybranego losowo przez grę.</li>
+                <li>Gra da Ci jeden darmowy przedmiot na start fali, ale to zazwyczaj za mało, by wybić wszystkich. Musisz na bieżąco dokupować kolejne sztuki przy stole rzemieślniczym.</li>
+                <li>W falach pojawią się: Mops, LBR, RC-XD, HKD, a na końcu potężny Iron Core, który jest najłatwiejszy do kontrolowania.</li>
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Trzymaj się blisko stołu rzemieślniczego obok lawy, aby błyskawicznie kupować nowe nagrody, gdy tylko te darmowe się skończą.</p>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Taśma Filmowa</h3>
+            <p>Po ukończeniu piątej fali zdobędziesz relikt Taśma Filmowa, ale uważaj – ma on swoją mroczną cenę:</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Od teraz możesz nosić przy sobie tylko jedną ulepszoną broń (Pack-a-Punch) naraz.</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

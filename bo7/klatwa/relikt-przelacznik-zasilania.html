@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Przełącznik Zasilania - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Jak Zdobyć Relikt Przełącznik Zasilania</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Musisz mieć ukończone główne zadanie Totenreich. Mecz możesz odpalić na dowolnym poziomie. Wyzwanie aktywuje sie na rundzie 20+.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/przelacznik_zasilania.webp" alt="Relikt Przełącznik Zasilania" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Polowanie na Jelenie:</span></h3>
+            <p>Poza granicami mapy ukryte są cztery totemy. Na każdym z nich znajdują się czaszki jeleni.</p>
+            <ul>
+                <li>Musisz odnaleźć wszystkie cztery totemy.</li>
+                <li>Na każdym z totemów zobaczysz 1 czaszkę, 2 czaszki, 3 czaszki, a na ostatnim 4 czaszki</li>
+                <li>Musisz zestrzelić totemy w kolejności od 1 do 4.</li>
+            </ul>
+            <p class="text-red"><strong>WAŻNE:</strong> Użyj Karabinu snajperskiego, aby dokładnie policzyć czaszki na każdym z nich. Zapamiętaj lub zapisz, w której lokalizacji znajduje się konkretna liczba czaszek</p>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Niedźwiedzie w Bloodheim Hall:</span></h3>
+            <p>Gdy już wiesz, gdzie ile czaszek wisi, udaj się do Bloodheim Hall.</p>
+            <ul>
+                <li>W centralnej części tego pomieszczenia, na ścianach, znajdziesz cztery Skóry niedźwiedzi.</li>
+                <li>Każda skóra jest przypisana do konkretnej lokalizacji totemu z zewnątrz mapy.</li>
+                <li>Twoim zadaniem jest przypisanie numerów 1-4 do skór na podstawie liczby czaszek jeleni na powiązanych z nimi totemach.</li>
+            </ul>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Rzut Toporkiem:</span></h3>
+            <p>Teraz potrzebujesz Tomahawk (Toporek do rzucania). Możesz go zdobyć jako losowy upuszczony przedmiot lub kupić przy Stole rzemieślniczym.</p>
+            <ul>
+                <li>Rzuć Tomahawkiem w skóry niedźwiedzi w odpowiedniej kolejności: od 1 do 4 (według liczby czaszek jeleni na ich totemach).</li>
+                <li>Jeśli zrobisz to dobrze, w tym samym pomieszczeniu pojawi się Zielony portal.</li>
+            </ul>
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Próba Pułapek:</span></h3>
+            <p>Wejdź w interakcję z portalem, aby rozpocząć wyzwanie.</p>
+            <ul>
+                <li><strong>Zasada próby:</strong> Wrogowie mogą zginąć TYLKO od pułapek.</li>
+                <li><strong>Strategia:</strong> Nie marnuj amunicji, bo kule nic im nie zrobią. Musisz trenować zombie (biegać w kółko, tworząc grupę) i wprowadzać je prosto w aktywne pułapki na mapie.</li>
+                <li><strong>Fale:</li>strong> Musisz przetrwać 3 fale, wybijając wszystkich przeciwników za pomocą pułapek.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Przełącznik Zasilania</h3>
+            <p>Co daje ten Relikt?</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Jeśli aktywujesz go w przyszłych meczach, Twój ekwipunek Granaty/Taktyczne będzie się losowo zmieniać co rundę. To jak Gun Game, ale dla waszych kieszeni!</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

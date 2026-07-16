@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Kamień Druida - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Jak Zdobyć Relikt Kamień Druida</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Ten relikt jest dostępny wyłącznie w Trybie Klątwa i obecnie wymaga pomocy kumpla, aby wywołać odpowiedni błąd w systemie.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/kamien_druida.webp" alt="Relikt Kamień Druida" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Start w pojedynkę</span></h3>
+            <p>Zacznij grę solo w trybie Trybie Klątwa. Nie ma znaczenia, który poziom trudności wybierzesz, metoda działa na każdym z nich. Przebijaj się przez hordy aż do rundy 19.</p>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: „Zaproszenie z zaświatów”</span></h3>
+            
+            <ul>
+                <li>Gdy będziesz w trakcie rundy 19, Twój znajomy musi dołączyć do Twojej gry. Bardzo ważne jest, aby wszedł do sesji, zanim licznik przeskoczy na rundę 20.</li>
+                <li><strong>Znak sukcesu:</strong> Jeśli zrobisz to poprawnie, podczas przejścia między rundami usłyszysz charakterystyczny, mroczny śmiech Mr. Peeks.</li>
+            </ul>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Odnalezienie Portalu</span></h3>
+            <p>Udaj się do Garden Area (Obszar ogrodu). Portal prowadzący do wyzwania znajdziesz po lewej stronie od lokacji Wisp T.</p>
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Wyzwanie – Potęga Uleczenia </span></h3>
+            <ul>
+                <li>Wewnątrz portalu czeka Cię nietypowe zadanie. Możesz zadawać obrażenia wrogom TYLKO wtedy, gdy jesteś w stanie Overhealed 
+                    (Twoje punkty życia przekraczają standardowe maksimum, co widać jako zielony pasek zdrowia).</li>
+                <p>Jak utrzymać ten stan? Masz trzy sposoby:</p>
+                <li><strong>Drzewa Wiśni:</strong> Uderz melee trzy razy drzewa wiśni, a następnie stań pod nimi, aby otrzymać efekt nadmiernego leczenia.</li>
+                <li><strong>Stim Shots:</strong> Używaj Stim Shots (Zastrzyki stymulujące), aby błyskawicznie podbić zdrowie.</li>
+                <li><strong>Light Ment Ammo Mod:</strong> Wykorzystaj ulepszenie amunicji Light Ment (Kuracja Światłem), która leczy Cię podczas walki.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Kamień Druida</h3>
+            <p>Po ukończeniu wyzwania otrzymasz relikt o potężnym, ale ryzykownym działaniu:</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Twój pasek wykrwawiania się znika całkowicie. Jeśli masz przy sobie Self-revive (Autoreanimacja), 
+                    podniesiesz się natychmiastowo. Jednak jeśli grasz w kooperacji i nie masz autoreanimacji, padasz trupem od razu po otrzymaniu krytycznych obrażeń.</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

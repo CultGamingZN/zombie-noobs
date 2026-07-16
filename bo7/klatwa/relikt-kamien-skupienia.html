@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Kamień Skupienia - Ashes Of The Damned | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-ashes">
+        <h1>Jak Zdobyć Relikt Kamień Skupienia</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Musisz mieć ukończone główne zadanie Ashes Of The Damned, aby zdobyć ten relikt. Mecz musisz właczyć na Tier 1. Wyzwanie aktywuje się od rundy 40+.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/kamien_skupienia.webp" alt="Relikt Kamień Skupienia" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Runda 40:</span></h3>
+            <p>Wasze zadanie zaczyna się dopiero na 40. rundzie. Dopiero wtedy będziecie mogli zdobyć przedmioty potrzebne do aktywacji portalu.</p>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Dwie butelki wina:</span></h3>
+            <p>Musicie zebrać dwa specyficzne przedmioty ukryte na mapie:</p>
+            <ul>
+                <li><strong>Butelka od Zersa Bear:</strong> Musicie zabić Zersa bear atakiem wręcz (melee). Możecie go wcześniej osłabić strzałami, ale ostateczny cios musi zadać nóż.</li>
+                <img src="img/kamien_skupienia01.webp" alt="Bębny w Kuchni" class="guide-img">
+                <li><strong>Butelka od TED-a:</strong> Wykonujcie zadania TED-a. Po jego ukończeniu butelka wypadnie ze skrzyni z nagrodami.</li>
+                <img src="img/kamien_skupienia02.webp" alt="Bębny w Kuchni" class="guide-img">
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Niedźwiedź zaczyna się pojawiać od rundy 16, ale możecie go przywołać, strzelając w trzy ukryte czaszki w 
+                Kosmodrom Zarya za pomocą Necrofluid Gauntlet (Rękawica Nekrofluidu – cudowna broń).</p>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Simon Says w chacie:</span></h3>
+            <ul>
+                <li>Z obiema butelkami udajcie się do Chaty na BLACKWATER i postawcie je na barze.</li>
+                <img src="img/kamien_skupienia03.webp" alt="Bębny w Kuchni" class="guide-img">
+                <li>Butelki pękną w losowej kolejności.</li>
+                <li>Zapamiętajcie tę sekwencję (nagrajcie to telefonem, jeśli pamięć zawodzi!).</li>
+                <li>Gdy butelki się odrodzą, uderzcie lub strzelcie w nie w identycznej kolejności. Jeśli zrobicie to dobrze, usłyszycie śmiech Mr Peaks.</li>
+            </ul>
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Próba:</span></h3>
+            <p>Udajcie się do Cosmo Drone, gdzie pojawi się żółty portal.</p>
+            <ul>
+                <li><strong>Wyzwanie:</strong> Po wejściu w portal stracicie wszystkie punkty. Przez całą próbę macie 0 punktów, co oznacza brak możliwości kupna amunicji, Perk-a-Cola (Atuty) czy korzystania z maszyn.</li>
+                <li><strong>Fale:</strong> Musicie przetrwać 5 fal zombie.</li>
+                <li><strong>HVTs:</strong> W 2. oraz 5. fali pojawią się HVTs (Cele o wysokiej wartości). Skupcie na nich ogień, by szybciej zakończyć rundę.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Kamień Skupienia</h3>
+            <p>Co robi ten relikt?</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Po jego aktywacji w meczu całkowicie zablokowana zostaje możliwość używania Self-revive kits (Zestawy do samoreanimacji).
+                    To sprawia, że każda pomyłka może być ostatnią, a atut Dying Wish staje się Waszym najlepszym przyjacielem! Nadal możesz zdobyć Selfa z wyzwania Tedda!</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

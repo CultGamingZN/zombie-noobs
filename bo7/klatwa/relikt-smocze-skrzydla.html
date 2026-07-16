@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Smocze Skrzydła - Ashes Of The Damned | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-ashes">
+        <h1>Jak Zdobyć Relikt Smocze Skrzydła</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Musisz mieć ukończony główny Easter Egg na mapie Ashes Of The Damned. Wyzwanie aktywuje się na rundzie 20+.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/smocze_skrzydla.webp" alt="Relikt Smocze Skrzydła" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Powietrzny ostrzał:</span></h3>
+            <ul>
+                <li>Udajcie się na Van Dorn Farm. Znajdziecie tam Jump pad (Platforma do skakania), który wystrzeli Was w stronę Janus Towers.</li>
+                <li>Gdy będziecie w powietrzu, wypatrujcie trzech fioletowych symboli.</li>
+                <li>Musicie zestrzelić wszystkie trzy w trakcie jednego lotu. Jeśli się nie uda, spokojnie – możecie próbować do skutku.</li>
+            </ul>
+            
+            <!-- Układ dwóch zdjęć obok siebie dla Kroku 1 -->
+            <div class="card-details">
+                <div class="card-column">
+                    <img src="img/smocze_skrzydla01.webp" alt="Smocze Skrzydła01" class="guide-img">
+                </div>
+                <div class="card-column">
+                    <img src="img/smocze_skrzydla02.webp" alt="Smocze Skrzydła02" class="guide-img">
+                </div>
+            </div>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Aktywacja portalu:</span></h3>
+            <ul>
+                <li>Gdy symbole znikną, wróćcie na Van Dorn Farm. Zobaczycie tam zielony portal prowadzący do Próba reliktu.</li>
+                <li>Podejdź do portalu i wejdź w interakcję.</li>
+                <li>Czekają Cię trzy rundy. Pierwsze dwie są proste, ale trzecia jest długa i podstępna.</li>
+            </ul>
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Przetrwanie próby</span></h3>
+            <ul>
+                <li>Zostaniecie przeteleportowani do specjalnej strefy. To wyzwanie polega na przetrwaniu 4 fal zombie.</li>
+                <li>Każdy Power-up (Bonus, np. Insta-kill lub Max Ammo), który pojawi się na mapie, zada Wam obrażenia przy dotknięciu.</li>
+                <li>Zabijajcie zombie z dystansu, żeby przypadkiem nie wbiec w „świecący bonus”.</li>
+                <li>Na mapie dostępna Skrzynia z amunicją, więc nie martwcie się o naboje.</li>
+                <li>W 4. fali pojawią się HVTs (Cele o wysokiej wartości/Bossowie) – musicie ich wyeliminować, aby ukończyć próbę.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Smocze Skrzydła</h3>
+            <p>Co daje ten relikt po aktywacji?</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Całkowicie wyłącza on wypadanie standardowych bonusów z zombie.
+                    Jedynym sposobem na zdobycie Max Ammo czy darmowych perków będą teraz zadania TED-a, GobbleGums lub ukryte Easter Egg. Nawet rundy z Ravagerami nie dadzą Wam amunicji!.</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>

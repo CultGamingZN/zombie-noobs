@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak Zdobyć Relikt Gramofon - Kowakujo | Zombie Noobs</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="../../index.html" class="nav-logo">Zombie Noobs</a>
+        <div class="nav-links">
+            <a href="../../index.html">Start</a>
+        </div>
+    </nav>
+
+    <header class="guide-header guide-header-kowakujo">
+        <h1>Jak Zdobyć Relikt Gramofon</h1>
+    </header>
+
+    <section class="guide-content">
+        <a href="../mapy-bo7.html" class="btn-back-custom">← Powrót do map</a>
+        <br>
+        <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+
+        <p>Ten relikt wymaga wyczucia rytmu i pewnego oka. Możecie go zdobyć na dowolnym poziomie klątwy.</p>
+        
+        <!-- Główna grafika reliktu -->
+        <img src="img/gramofon.webp" alt="Relikt Gramofon" class="guide-img">
+       
+        <!-- KROK 1 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok1"> <span>KROK 1: Znajdź Pałeczki (Drumsticks)</span></h3>
+            <p>Zanim zaczniecie koncert, potrzebujecie narzędzi. Na mapie ukryte są dwie pałeczki perkusyjne:</p>
+            <ul>
+                <li><strong>Gate House (Stróżówka):</strong> Pierwsza pałeczka czeka na Was w tym budynku.</li>
+                <li><strong>Workshop (Warsztat):</strong> Drugą znajdziecie wśród narzędzi w warsztacie. Podnieście obie, a będziecie gotowi do gry.</li>
+            </ul>
+            
+            <!-- Układ dwóch zdjęć obok siebie dla Kroku 1 -->
+            <div class="card-details">
+                <div class="card-column">
+                    <img src="img/palka01.webp" alt="Pałeczka w Gate House" class="guide-img">
+                </div>
+                <div class="card-column">
+                    <img src="img/palka02.webp" alt="Pałeczka w Workshop" class="guide-img">
+                </div>
+            </div>
+        </div>
+        
+        <!-- KROK 2 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok2"> <span>KROK 2: Sekwencja w Kuchni (Kitchens)</span></h3>
+            <p>Udajcie się do budynku Kuchnie, wchodząc od strony Flower Garden (Ogród kwiatowy). Przy schodach znajdziecie dwa bębny.</p>
+            <ul>
+                <li>Podejdź do tego, który świeci, i wejdź z nim w interakcję, aby rozpocząć wyzwanie.</li>
+                <li>Musisz uderzać nożem bębny w takiej kolejności, w jakiej gra je pokaże.</li>
+                <li>Czekają Cię trzy rundy. Pierwsze dwie są proste, ale trzecia jest długa i podstępna.</li>
+            </ul>
+            <p class="text-red"><strong>PRO TIP:</strong> Nagrajcie tę ostatnią sekwencję telefonem, żeby się nie pomylić!</p>
+            
+            <!-- Grafika dla bębnów z Kroku 2 -->
+            <img src="img/gramofon_krok2.webp" alt="Bębny w Kuchni" class="guide-img">
+        </div>
+
+        <!-- KROK 3 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok3"> <span>KROK 3: Wyzwanie Portalu (Tylko Snajperki!)</span></h3>
+            <p>Po poprawnym ukończeniu trzech sekwencji obok Was pojawi się portal.</p>
+            <ul>
+                <li><strong>UWAGA:</strong> Zanim wejdziecie, musicie mieć Karabin snajperski. W tym wyzwaniu tylko ta broń zadaje obrażenia!</li>
+                <li>Polecam ulepszyć snajperkę Ion w maszynie Pack-a-Punch – znajdziecie ją naprzeciwko samej maszyny ulepszającej P&P.</li>
+            </ul>
+        </div>
+
+        <!-- KROK 4 -->
+        <div class="step-card">
+            <h3><input type="checkbox" id="krok4"> <span>KROK 4: Przetrwanie Fal</span></h3>
+            <p>Wewnątrz portalu musicie przetrwać 4 fale zombie.</p>
+            <ul>
+                <li>Przygotujcie się na dwie fale HVT.</li>
+                <li>Używajcie Gobblegums, takich jak Instakill (Natychmiastowe zabójstwo), aby ułatwić sobie sprawę.</li>
+                <li>Po ukończeniu czwartej fali zostaniecie przeteleportowani z powrotem i odblokujecie relikt.</li>
+            </ul>
+        </div>
+
+        <!-- NAGRODA -->
+        <div class="reward-card">
+            <h3 class="text-red">NAGRODA: Relikt Gramofon</h3>
+            <p>Ten relikt to totalna miazga dla fanów czystych obrażeń:</p>
+            <ul>
+                <li><strong>EFEKT:</strong> Wasze pociski zadają znacznie większe obrażenia, ale każdy strzał zużywa teraz dwa naboje z magazynka.</li>
+            </ul>
+        </div>
+
+        <!-- Przyciski nawigacyjne na dole -->
+        <div class="nav-buttons-bottom">
+            <a href="../../index.html" class="btn-back-custom">← Powrót do strony głównej</a>
+            <a href="#" onclick="history.back(); return false;" class="btn-back-custom">← Powrót do poprzedniej strony</a>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 Zombie Noobs. Wszelkie prawa zastrzeżone.</p></footer>
+
+    <!-- SKRYPTY (Checkboxy) -->
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const pageName = window.location.pathname.split('/').pop(); 
+        
+        checkboxes.forEach(cb => {
+            const uniqueId = pageName + '-' + cb.id; 
+            const savedState = localStorage.getItem(uniqueId);
+            
+            if (savedState === 'true') cb.checked = true;
+            
+            cb.addEventListener('change', () => {
+                localStorage.setItem(uniqueId, cb.checked);
+            });
+        });
+    </script>
+</body>
+</html>
